@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 0.5rem;
+}
+
+.details {
+    width: 25rem;
+
+}
+
+.details form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.container h1{
+     @apply text-3xl font-bold p-4 mt-10;
+}

@@ -1,0 +1,24 @@
+.container { 
+    @apply border-2 rounded-2xl p-4 mx-2;
+    background-color: aliceblue;
+    border-color: #9b2b34;
+    position: relative;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+   
+}
+
+.label {
+    
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: #F2B872;
+    font-size: 1rem;
+}
+
+.content{
+    padding: 0.8rem 0.8rem;
+    height: 3rem;
+    display: flex;
+    align-items:center;
+}

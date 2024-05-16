@@ -1,0 +1,35 @@
+.container{
+    @apply  mt-32 rounded-xl shadow-lg max-sm:mt-2  ;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30rem;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container h1{
+    @apply text-3xl font-bold p-4 mt-10;
+}
+
+.container form{
+    @apply  max-sm:p-8 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.register{
+    @apply mb-4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register a{
+    @apply text-green-500;
+}

@@ -1,0 +1,35 @@
+.container{
+    @apply sm:mt-24 max-sm:mt-4   ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.content {
+   
+    display: flex;
+    flex-direction: column;
+}
+
+.summary{
+   @apply flex flex-row m-auto mt-2 border-2 border-gray-300 rounded-lg mb-2; 
+}
+.summary h3{
+    @apply sm:text-2xl font-bold max-sm:text-xs px-2  ; 
+}
+.summary span{
+    @apply sm:text-xl max-sm:text-xs px-2 sm:pt-1; 
+}
+
+.buttons_container{
+    width: 20%;
+    flex-basis:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    margin:2rem;
+    width: 35rem;
+}

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Breadfast';
+    src: url('./Breadfast.otf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BreadHandmade';
+    src: url('./BreadHandmade.ttf') format('truetype'); 
+    font-weight: bold;
+    font-style: normal;
+}

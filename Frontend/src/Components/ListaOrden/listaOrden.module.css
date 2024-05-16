@@ -1,0 +1,38 @@
+
+.container{
+    @apply rounded-xl shadow-lg p-4 max-sm:w-80 border-2 border-gray-300 ;
+
+
+    margin: 0 auto;
+   
+    background-color: #F2F2F2;
+}
+
+
+.container li img {
+
+    
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 100rem;
+}
+.container ul{
+   @apply  max-sm:flex max-sm:flex-col max-sm:items-center max-sm:pb-4 max-sm:m-4    sm:flex sm:justify-between sm:py-2 sm:m-4  sm:px-4 rounded-2xl shadow-lg ;
+
+}
+.container .text{
+    @apply mt-4;
+}
+
+
+.container a:hover{
+    opacity: 0.9;
+}
+.container h2{
+    @apply text-center text-2xl;
+
+}
+.total{
+    @apply text-center w-28  m-auto py-2 rounded-lg shadow-lg bg-green-500;
+}

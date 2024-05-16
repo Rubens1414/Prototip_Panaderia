@@ -1,0 +1,124 @@
+/* Estilos base */
+.container{
+    @apply rounded-lg shadow-lg p-4 shadow-orange-300;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem;
+}
+
+.container >*{
+    min-width: 1rem;
+    max-width: 40rem;
+    min-height: 1rem;
+}
+
+.image{
+
+    border-radius: 3rem;
+    flex: 1 1 auto;
+    object-fit: cover;
+    height: 35rem;
+    margin: 1rem;
+}
+
+.details{
+    @apply rounded-lg shadow-lg;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    border-radius: 3rem;
+    padding: 2rem;
+    color: black;
+    margin-left: 1rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.name, .favorite{
+    font-size: 2rem;
+}
+
+
+
+.origins{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.7rem 0;
+}
+
+.origins>span{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    border-radius: 2rem;
+    background-color: aliceblue;
+}
+
+.cook_time span{
+    padding: 0.6rem 2rem 0.6rem 0;
+    border-radius: 10rem;
+    font-size: 1.3rem;
+}
+
+.price{
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    color: green;
+}
+
+.price::before{
+    content: 'Price:';
+    color: darkgray;
+}
+
+.container button{
+    color: white;
+    background-color: #9b2b34;
+    border: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    outline: none;
+}
+
+.container button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* Media queries para responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .image {
+       
+        height: auto;
+        max-width: 70%;
+    }
+
+    .details {
+        width: auto;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .origins, .cook_time {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .name,  .origins span, .cook_time span, .price {
+        font-size: 1.5rem;
+    }
+}

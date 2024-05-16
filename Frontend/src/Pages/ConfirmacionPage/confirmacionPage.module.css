@@ -1,0 +1,32 @@
+.container{
+    margin-top:1rem;
+    display: flex;
+    margin: 0 0 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content{
+    @apply justify-center;
+    
+   
+}
+
+.content .inputs {
+    @apply flex max-lg:flex-col lg:flex-row px-4 pt-4 ;
+ 
+}
+
+
+
+
+
+.buttons Button{
+    @apply m-auto my-8 bg-blue-600 w-96 max-sm:w-40 py-2 rounded-xl text-blue-50; 
+    display: flex;
+    justify-content:center;
+}
+
+.buttons Button:hover{
+    @apply bg-blue-700;
+}

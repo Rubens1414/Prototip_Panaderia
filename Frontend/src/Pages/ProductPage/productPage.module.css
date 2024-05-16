@@ -1,0 +1,5 @@
+body {
+    min-height: 100vh;
+    @apply flex flex-col bg-gradient-to-b from-slate-100 to-red-100;
+    
+}

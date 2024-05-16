@@ -1,0 +1,39 @@
+.container{
+    @apply m-auto  text-wrap sm:w-3/6   pb-8 sm:mt-16  max-sm:mt-4 mb-8 rounded-lg sm:bg-white; 
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.content{
+    
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.header {
+
+    @apply m-auto sm:mb-10 max-sm:mb-4  ;
+
+}
+
+.header div{
+    @apply p-2
+}
+.header h1{
+    @apply p-2
+}
+
+.header strong{
+    @apply mx-4;
+    width:20%;
+}
+
+.payment{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}

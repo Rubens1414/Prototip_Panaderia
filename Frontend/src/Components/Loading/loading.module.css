@@ -1,0 +1,29 @@
+.container{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffea;
+    z-index: 10000;
+    top:0;
+    left:0;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+}
+
+.items img{
+    @apply w-80 h-80 max-sm:w-36 max-sm:h-36; 
+   
+}
+
+.container h1{
+    @apply text-3xl max-sm:text-xl ;
+    color: #9b2b34;
+    margin-top: 1rem;
+}

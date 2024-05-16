@@ -1,0 +1,115 @@
+.container {
+    @apply flex sm:justify-center  sm:flex-row sm:items-center max-sm:flex-col max-sm:m-auto max-sm:mr-4 ;
+  
+
+}
+
+.bodyc {
+    min-height: 100vh;
+    background-color: #F2F2F2;
+   
+}
+.list{
+    @apply ml-4 p-4 mt-10 rounded-xl shadow-xl mb-8 border-2 border-neutral-600;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    flex: 2.0;
+
+}
+.list li{
+    @apply  m-2 rounded-xl shadow-lg border-2 border-neutral-600;
+    background-color: #F2F2F2;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+
+.list li img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100rem;
+    object-fit: cover;
+}
+
+.list li div{
+    padding: 1rem;
+}
+
+.list li div:not(:first-child){
+   flex-basis: 18%;
+}
+
+.list li select {
+    width:3rem;
+    outline:none;
+    border:none;
+    border-bottom: 1px solid lightgray;
+    font-size:1.1rem;
+    font-weight: 100;
+}
+
+.list .remove_button{
+    border-radius:1rem;
+    border:none;
+    color:#9b2b34;
+    opacity: 0.7;
+    
+}
+
+.list .remove_button:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.checkout{
+    @apply  pt-4 rounded-xl shadow-xl sm:w-96  ml-4  mb-4;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 3;
+}
+
+.checkout > div{
+    font-size:1.4rem;
+    margin:1rem;
+    flex: 3;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.checkout .breads_count{
+    margin-bottom: 1.5rem;
+}
+
+.checkout .breads_count::before{
+    content:'Cantidad: ';
+    color: #F2B872;
+}
+
+.checkout .total_price::before{
+    content:'Precio: ';
+    color: green;
+   
+}
+
+.checkout a{
+    @apply rounded-b-xl shadow-lg p-4;
+    color: white;
+    background:#9b2b34;
+    display: block;
+    width: 100%;
+    text-align: center;
+    justify-self: center;
+}
+
+.checkout a:hover{
+   opacity: 0.8 ;
+    cursor: pointer;
+}

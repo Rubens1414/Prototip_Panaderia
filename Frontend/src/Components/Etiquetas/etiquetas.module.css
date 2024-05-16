@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    /* Mantiene el .despliegue en relación a este contenedor */
+}
+.button{
+    @apply rounded-2xl my-4 border-2 p-2  shadow-red-500  shadow-md;
+    color:whitesmoke;
+    background-color: #9b2b34;
+    border-color: #9b2b34;
+    cursor : pointer;
+
+}
+.button:hover{
+    background-color: #F2B872;
+    border-color: #F2B872;
+    color: white;
+}
+.despliegue {
+    @apply rounded-sm ;
+    position: absolute;
+    top: 100%;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    
+    width: 10rem;
+}
+
+
+
+.container a {
+    @apply rounded-sm ;
+    color: #F2B872;
+    text-decoration: none;
+    
+
+    display: block;
+    z-index: 1001;
+    /* Z-index para asegurar que los enlaces son clicables */
+}
+
+.container a:hover {
+    background-color: #F2B872;
+    color: white;
+}
+
+.containerB{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.containerB a{
+
+    background-color: #f0f0f0;
+    padding:0.3rem 1rem;
+    margin: 0.2rem 0.15rem;
+    border-radius: 10rem;
+    font-weight: 600;
+    color: #9b2b34;
+
+}

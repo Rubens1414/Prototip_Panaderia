@@ -1,0 +1,90 @@
+.list {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+   
+}
+
+
+.list li a {
+    @apply bg-slate-100 shadow-lg rounded-lg m-2 p-2 shadow-red-200;
+    height: 22.5rem;
+    width: 20rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #F2B872;
+    
+}
+
+.image {
+    @apply rounded-lg; 
+    object-fit: cover;
+    height: 14.5rem;
+}
+
+.content {
+   
+   
+    position: relative;
+    
+}
+.content .name {
+   @apply border-b-2 mt-2;
+   border-color: #F2B872;
+}
+
+
+
+.content .price{
+   margin-left: 0;
+    margin-right: 0;
+}
+
+.product_item_footer {
+    @apply p-2;
+    display: flex;
+   
+    align-items: flex-start;
+}
+
+.origins span {
+    border-radius: 2rem;
+    background-color: whitesmoke;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: gray;
+    margin-right: 0.3rem;
+    padding: 0 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.origins {
+    flex: 9;
+}
+
+.cook_time {
+    font-size: 0.9rem;
+
+}
+
+.price {
+    @apply w-full text-center rounded-xl bg-green-500 ;
+    position: absolute;
+    color: #F2F2F2;
+    font-size: 1.1rem;
+}
+
+.content:hover .name {
+    color:#9b2b34;
+    border-color: #9b2b34;
+}
+
+.content:hover .cook_time {
+    color: #9b2b34;
+}

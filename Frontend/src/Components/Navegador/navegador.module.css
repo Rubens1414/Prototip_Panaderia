@@ -1,0 +1,105 @@
+
+.header{
+    @apply p-2  border-b-2 shadow-sm shadow-orange-400;
+    background-color: #F2F2F2;
+    border-color: #9b2b34;
+
+}
+.container{
+    @apply flex justify-between;
+    margin: 0 auto;
+}
+.header a:hover {
+    @apply rounded-lg shadow-lg shadow-orange-400;
+    background: #F2B872;
+    color: white;
+    cursor: pointer;
+}
+
+.menuUsuario{
+   @apply     hidden sm:space-x-2  sm:flex pr-3;
+    position: relative;
+}
+
+.navmenu_l ul{
+    @apply  hidden flex-row  sm:flex space-x-4 ;
+    
+}
+.navmenu ul{
+    @apply   flex-row  sm:flex space-x-4 ;
+    
+}
+
+
+.navmenu .carrito{
+    @apply  hidden sm:flex;
+
+}
+.menu {
+    @apply absolute z-20  border-2 rounded-lg shadow-none p-8;
+    margin: 3rem 0 0 0;
+    background-color: whitesmoke;
+    display: none;
+    border-color: #9b2b34;
+    z-index: 1001;
+
+}
+.menu a {
+    @apply w-full min-w-8 rounded-lg;
+}
+.header ul a {
+    padding: 1rem;
+    display: inline-block;
+}
+
+.menuUsuario:hover .menu {
+    display: block;
+}
+.logo{
+  @apply rounded-lg sm:p-2 sm:ml-28 max-sm:mt-4 max-sm:ml-4;
+}
+
+
+.celcontainer{
+    @apply hidden max-sm:flex;
+}
+
+.celcontainer button:hover{
+    @apply rounded-lg shadow-lg shadow-orange-400;
+    background: #F2B872;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.celcontainer button{
+    @apply  p-4 ;
+   
+}
+
+.menuCel {
+    @apply absolute  p-4  border-2 rounded-lg shadow-none ;
+    margin: 4rem 0 0 -5rem;
+    background-color: whitesmoke;
+    display: block;
+    border-color: #9b2b34;
+    z-index: 1001;
+}
+.menuCelOf{
+    display: none;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Transparente, pero también puede ser semi-transparente si prefieres */
+    z-index: 50; /* Asegúrate de que esté por debajo del menú pero por encima de otros contenidos */
+  }
+  .cart_count{
+    @apply ml-4 p-1 rounded-full text-xs text-white;
+    background-color: #9b2b34;
+    color: white;
+
+}
