@@ -17,8 +17,7 @@
 }
 
 .menuUsuario{
-   @apply     hidden sm:space-x-2  sm:flex pr-3;
-    position: relative;
+   @apply     hidden lg:space-x-2   lg:flex pr-3;
 }
 
 .navmenu_l ul{
@@ -26,13 +25,18 @@
     
 }
 .navmenu ul{
-    @apply   flex-row  sm:flex space-x-4 ;
+    @apply    flex-row  flex space-x-4 ;
     
 }
 
+.navmenu_l{
+    @apply hidden lg:flex space-x-4;
+    
+
+}
 
 .navmenu .carrito{
-    @apply  hidden sm:flex;
+    @apply  hidden lg:flex;
 
 }
 .menu {
@@ -58,10 +62,12 @@
 .logo{
   @apply rounded-lg sm:p-2 sm:ml-28 max-sm:mt-4 max-sm:ml-4;
 }
-
+.imglogo{
+    @apply w-10 h-10;
+}
 
 .celcontainer{
-    @apply hidden max-sm:flex;
+    @apply hidden max-lg:flex;
 }
 
 .celcontainer button:hover{

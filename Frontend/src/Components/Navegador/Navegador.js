@@ -14,11 +14,16 @@ export default function Navegador() {
     setMenuVisible(prev => !prev);
   };
 
+  const cerrar_session = () => {
+    toggleMenu();
+    logout();
+  };
+
   return (
     <header className={classes.header}>
         <div className={classes.container}>
             <div className={classes.logo}>
-                <h1>Logo</h1>
+                <img src='bread.png' alt='pan' className={classes.imglogo}/>
             </div>
             <div className={classes.navmenu_l}>
                 <ul>
@@ -41,7 +46,7 @@ export default function Navegador() {
                             <Link onClick={toggleMenu}  to="/productos">Productos</Link>
                             <Link onClick={toggleMenu}  to="/cart">Carrito</Link>
                             <Link  onClick={toggleMenu} to="/orders">Pedidos</Link>
-                            <Link to="/login" onClick={{logout,toggleMenu}}>Cerrar Sesión</Link>
+                            <Link  onClick={cerrar_session} to="/login">Cerrar Sesión</Link>
                         </div>
                     </div>
                     <li className={classes.menuUsuario}>
@@ -49,7 +54,7 @@ export default function Navegador() {
                         <div className={classes.menu}>
                         <Link to="/profile">Perfil</Link>
                         <Link to="/orders">Pedidos</Link>
-                        <a onClick={logout}>Cerrar Sesión</a>
+                        <Link  onClick={cerrar_session} to="/login">Cerrar Sesión</Link>
                         </div>
                     </li>
                     </>
@@ -65,7 +70,10 @@ export default function Navegador() {
                      <Link onClick={toggleMenu} to="/register">Registrarse</Link>
                     </div>
                     </div>
-                
+                    <li className={classes.menuUsuario}>
+                     <Link to="/login">Iniciar Sesión</Link>
+                     <Link  to="/register">Registrarse</Link>
+                    </li>
                     </>
                 )}
                 <li>

@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors(
     {
         credentials: true,
-        origin: '*' // Permite solicitudes desde cualquier origen (solo para pruebas)
+        origin:'*' // Permite solicitudes desde cualquier origen (solo para pruebas)
        // origin: 'http://localhost:3000'
 
     }

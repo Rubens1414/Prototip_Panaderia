@@ -5,8 +5,16 @@ import {Link} from 'react-router-dom'
 import Price from '../../Components/Price/price'
 import NotFound from '../../Components/NoEncontre/NoEncontre'
 import {motion} from 'framer-motion'
+import { useState } from 'react'
 export default function CartPage() {
     const {cart,removeFromCart,changeQuantity}=useCart();
+    const [selectedOption, setSelectedOption] = useState('');
+
+    const handleOptionChange = (e) => {
+      setSelectedOption(e.target.value);
+    };
+      
+      
     return (
      <div className={classes.bodyc}>
      { cart.items.length === 0 ? (<NotFound message='No tienes panes, ¡Vamos a comprar! ' linkRoute='/productos' imagen='/carrito.png' linkText='Ir a Productos'/>) :
@@ -43,7 +51,37 @@ export default function CartPage() {
              <div>
               <div className={classes.breads_count}>{cart.totalCount}</div>
               <div className={classes.total_price}><Price price={cart.totalPrice}/></div>
-              </div>     
+           
+              </div>
+              <div className={classes.opciones}>
+              <div className="space-y-4">
+      <div>
+        <input 
+          type="radio" 
+          id="store" 
+          name="delivery" 
+          value="store" 
+          checked={selectedOption === 'store'} 
+          onChange={handleOptionChange}
+          className="mr-2"
+        />
+        <label htmlFor="store">Recoger en la tienda</label>
+      </div>
+      <div>
+        <input 
+          type="radio" 
+          id="home" 
+          name="delivery" 
+          value="home" 
+          checked={selectedOption === 'home'} 
+          onChange={handleOptionChange}
+          className="mr-2"
+        />
+        <label htmlFor="home">Domicilio</label>
+      </div>
+    </div>
+             
+                </div>
               <Link to='/checkout' className={classes.checkout_button}>Proceder al Pago</Link>
          </div>
       </div>

@@ -5,6 +5,7 @@ import * as userServices from '../Services/userServices';
 import { toast } from "react-toastify";
 
 
+
 const AuthContext=createContext(null);
 
 export const AuthProvider=({children})=>{  
@@ -35,6 +36,7 @@ export const AuthProvider=({children})=>{
     const logout=()=>{
         userServices.logout();
         setUser(null);
+      
         toast.success('Logout Successful');
     }
    const updateProfile = async user => {
