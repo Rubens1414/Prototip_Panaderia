@@ -88,7 +88,7 @@ export default function OrdersPage() {
       {orders?.length === 0 && (
         <NoEncontre
           imagen='/Bonitos.png' 
-          message={filter?'¡Aqui no hay nada chef!': 'Todavia no haz comido ni un solo pan :('}
+          message={filter?'¡Aqui no hay nada chef!': 'Todavía  no has comido ni un solo pan :('}
           linkRoute={filter ? '/orders' : '/productos'}
           linkText={filter ? 'Ver todos los pedidos' : 'Ve a comprar pan'}
         />
