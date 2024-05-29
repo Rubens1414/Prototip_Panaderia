@@ -7,7 +7,7 @@
     "start": "cd Backend && npm start",
     "prebuild":"cd Backend && npm install & cd Frontend && npm install",
     "build":"cd Frontend && npm run build",
-    "postbuild":"move /Y Frontend/build Backend/src/public"
+    "postbuild": "mv -f frontend/build backend/src/public"
   },
   "author": "",
   "license": "ISC"
