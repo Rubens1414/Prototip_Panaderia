@@ -20,7 +20,7 @@ export default function OrderTrackPage() {
   },[orderId])
 
   if (!orderId) 
-    return <NotFound message="Order not found" linkText="Go To Home Page"/>
+    return <NotFound message="Orden no encontrada" linkText="Ir al inicio"/>
 
   return order && 
   (
@@ -29,9 +29,12 @@ export default function OrderTrackPage() {
     
         <div className={classes.header}>
         <h1> <strong>Pedido#: {order.id}</strong></h1>
-            <div>
+            <div className={classes.datetime}>
+              
                 <strong>Tiempo:</strong>
-                <DateTime date={order.createdAt}/>
+                <DateTime  date={order.createdAt}/>
+               
+              
             </div>
             <div>
                 <strong>Direccion:  </strong> {order.address}
@@ -54,9 +57,9 @@ export default function OrderTrackPage() {
 
 
     {
-        order.status ==='NEW' && (
+        order.status ==='NUEVO' && (
             <div className={classes.payment}>
-                <Link to="/payment">Ir a pagar</Link>
+                <Link className={classes.payment} to="/payment">Ir a pagar</Link>
             </div>
         ) 
 

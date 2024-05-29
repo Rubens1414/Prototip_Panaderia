@@ -82,25 +82,41 @@ router.get('/newOrderForCurrentUser',
 
 router.get('/allstatus',
    handler(async (req, res) => {
+ 
       const allStatus = Object.values(OrderStatus);
       res.send(allStatus);
    })
 
 );
 router.get(
-  '/:status?',
-  handler(async (req, res) => {
-    const status = req.params.status;
-    const user = await UserModel.findById(req.user.id);
-    const filter = {};
+   '/:status?',
+   handler(async (req, res) => {
+     const status = req.params.status;
+     const user = await UserModel.findById(req.user.id);
+     const filter = {};
+ 
+     // Si el usuario no es administrador, solo puede ver sus propios pedidos
+     if (!user.isAdmin) filter.user = user._id;
+ 
+     // Si se proporciona un estado, filtramos por estado
+     if (status) {
+       filter.status = status;
+     }
+ 
+    
+ 
+     if (filter.status === 'undefined'){
+      const orders = await OrderModel.find( ).sort('-createdAt');
+      res.send(orders);
 
-    if (!user.isAdmin) filter.user = user._id;
-    if (status) filter.status = status;
-
-    const orders = await OrderModel.find(filter).sort('-createdAt');
-    res.send(orders);
-  })
-);
+     }else
+     {
+     const orders = await OrderModel.find(filter ).sort('-createdAt');
+     res.send(orders);
+   }
+    
+   })
+ );
 const getNewOrderForCurrentUser = async req =>
   await OrderModel.findOne({
     user: req.user.id,

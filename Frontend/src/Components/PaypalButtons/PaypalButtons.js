@@ -42,15 +42,15 @@ function Buttons({order}){
             const payment = await actions.order.capture()
             const orderId = await pay(payment.id)
             clearCart();
-            toast.success('Order paid successfully','Success');
+            toast.success('Pago exitoso','Success');
             navigate('/track/'+orderId)
         } catch (error){
-            toast.error('Payment failed','Error');
+            toast.error('Hubo un error en el pago','Error');
         }
     }
 
     const onError= err =>{
-        toast.error('An error occurred','Error');
+        toast.error('Un error ocurrió','Error');
     }
     return (
         <PayPalButtons 

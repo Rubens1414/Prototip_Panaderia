@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 
 import { getNewOrderForCurrentUser } from '../../Services/orderService'
-import classes from './motodoPagoPage.module.css'
+import classes from './metodoPagoPage.module.css'
 import OrderItemsList from '../../Components/ListaOrden/ListaOrden'
 import PaypalButtons from '../../Components/PaypalButtons/PaypalButtons'
 import { useLoading } from '../../Hooks/useLoading'
@@ -26,7 +26,7 @@ useEffect(() => {
     fetchOrder();
   }, []);
 
-  if (!order) return showLoading(); // Suponiendo que showLoading es una función que muestra un indicador de carga
+  if (!order) return showLoading(); 
 
   return (
     <>

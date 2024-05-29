@@ -5,29 +5,30 @@ const LoadingContext = createContext({});
 
 export const LoadingProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(false);
-    const location = useLocation(); // Hook de react-router-dom para acceder a la ubicación actual
+    const location = useLocation();
 
     const showLoading = () => setIsLoading(true);
     const hideLoading = () => {
         setTimeout(() => {
             setIsLoading(false);
-        }, 1000); // Ajusta este tiempo según sea necesario
+        }, 800);
     };
 
-    const specificRoutes = ['/', '/cart', '/register','/login'];
+    const specificRoutes = ['/', '/cart', '/register', '/login'];
 
     useEffect(() => {
-        // Comprueba si la ruta actual está en la lista de rutas específicas
+        // Mostrar loading al cambiar de ruta
+  
+        // Ocultar loading después de 1 segundo si la ruta está en las rutas específicas
         if (specificRoutes.includes(location.pathname)) {
             showLoading();
-        } else {
             hideLoading();
         }
 
         return () => {
             hideLoading();  // Asegurar que el loading se oculta cuando el componente o la ruta cambian
         };
-    }, []); // Dependencia en la ruta actual
+    }, [location.pathname]); // Dependencia en la ruta actual
 
     return (
         <LoadingContext.Provider value={{ isLoading, showLoading, hideLoading }}>

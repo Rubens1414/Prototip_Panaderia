@@ -1,7 +1,7 @@
 .container{
-    @apply m-auto  text-wrap sm:w-3/6   pb-8 sm:mt-16  max-sm:mt-4 mb-8 rounded-lg sm:bg-white; 
+    @apply m-auto  text-wrap    pb-8 sm:mt-16  max-md:mt-4 mb-8 rounded-lg ; 
 
-    display: flex;
+   
     justify-content: center;
 
 }
@@ -12,10 +12,12 @@
     flex-direction: column;
  
 }
-
+.datetime{
+    @appply text-wrap;
+}
 .header {
 
-    @apply m-auto sm:mb-10 max-sm:mb-4  ;
+    @apply m-auto sm:mb-10 max-md:mb-4  ;
 
 }
 
@@ -30,10 +32,21 @@
     @apply mx-4;
     width:20%;
 }
+ .datetime {
+    
+}
 
 .payment{
-    width: 100%;
-    text-align: center;
+    @apply  w-44 m-auto text-center p-2;
     margin-top: 2rem;
     margin-bottom: 5rem;
+}
+
+.payment :hover{
+    @apply bg-sky-600 rounded-lg shadow-md ;
+}
+
+.payment a
+{
+    @apply bg-sky-500 rounded-lg shadow-md ;
 }

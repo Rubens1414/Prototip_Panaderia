@@ -17,27 +17,27 @@ export const AuthProvider=({children})=>{
             console.log(user);
             setUser(user);
            
-            toast.success('Login Successful');
+            toast.success('Inicio de sesion exitoso');
         } catch (error) {
         
-           toast.error('Invalid email or password');
+           toast.error('Email o contraseña incorrectos');
         }
     }
      const register=async(registerData)=>{
         try {
             const user=await userServices.register(registerData);
             setUser(user);
-            toast.success('Register Successful');
+            toast.success('Registro exitoso');
         } catch (error) {
             //enviar mensaje de error
-            toast.error('User already exists');
+            toast.error('Este correo ya esta registrado');
         }
     }
     const logout=()=>{
         userServices.logout();
         setUser(null);
       
-        toast.success('Logout Successful');
+        toast.success('Salida exitosa');
     }
    const updateProfile = async user => {
     const updatedUser = await userServices.updateProfile(user);

@@ -8,8 +8,9 @@ import LoginPage from './Pages/LoginPage/LoginPage'
 import RegisterPage from './Pages/RegisterPage/RegisterPage'
 import ConfirmPage from './Pages/ConfirmacionPage/CorfirmacionPage'
 import AuthRoute from './Components/AuthRoute/AuthRoute'
-import MotodoPagoPage from './Pages/MetodoPagoPage/MotodoPagoPage'
+import MetodoPagoPage from './Pages/MetodoPagoPage/MetodoPagoPage'
 import PagoExitosoPage from './Pages/PagoExitosoPage.js/PagoExitosoPage'
+import PedidosPage from './Pages/PedidosPage/PedidosPage'
 
 export default function AppRoutes() {
   return <Routes>
@@ -30,7 +31,7 @@ export default function AppRoutes() {
     } />
      <Route path='/payment'element={
      <AuthRoute>
-      <MotodoPagoPage/>
+      <MetodoPagoPage/>
     </AuthRoute>
 
     
@@ -42,6 +43,11 @@ export default function AppRoutes() {
     </AuthRoute>
 
     } />
-    
+    <Route path='/orders/:filter?'element={
+     <AuthRoute>
+      <PedidosPage/>
+    </AuthRoute>
+
+    } />
    </Routes>
 }

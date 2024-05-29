@@ -1,0 +1,14 @@
+{
+  "name": "prototipo_panaderia_ds",
+  "version": "1.0.0",
+  "description": "Sigue estos pasos para configurar y ejecutar el proyecto localmente:",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "prebuild":"cd backend && npm install & frontend && npm install",
+    "build":"cd frontend && npm run build",
+    "postbuild":"move /Y frontend/build backend/src/public"
+  },
+  "author": "",
+  "license": "ISC"
+}

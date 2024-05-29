@@ -1,0 +1,165 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.all_status,
+.order_summary {
+    max-width: 45rem;
+    width: 100%;
+}
+
+.all_status {
+    @apply hidden lg:flex;
+   
+   
+    align-items: center;
+    height: 3rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+.all_status a {
+
+    @apply mx-2;
+    color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.all_status a:hover {
+    @apply shadow-lg shadow-orange-400;
+    background-color: #F2B872;
+    opacity: 0.8;
+}
+
+.order_summary {
+
+    @apply bg-slate-50 rounded-md; 
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2rem;
+}
+
+.order_summary>* {
+    padding: 0.8rem;
+}
+
+.header {
+    @apply max-sm:flex-col;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid whitesmoke;
+    border-radius: 1rem 1rem 0 0;
+    color: grey;
+}
+
+.items {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0.5rem 0;
+}
+
+.items img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.items img:hover {
+    opacity: 0.8;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid whitesmoke;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.price {
+    color: green;
+}
+
+.containerCel {
+    @apply hidden max-lg:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    /* Mantiene el .despliegue en relación a este contenedor */
+}
+.containerCel button{
+    @apply rounded-2xl my-4 border-2 p-2 ;
+    color:whitesmoke;
+    background-color: #9b2b34;
+    border-color: #9b2b34;
+    cursor : pointer;
+
+}
+.containerCel button:hover{
+    background-color: #F2B872;
+    border-color: #F2B872;
+    color: white;
+}
+.despliegue {
+    @apply rounded-sm ;
+    position: absolute;
+    top: 100%;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    
+    width: 10rem;
+}
+
+
+
+.containerCel a {
+    @apply rounded-sm ;
+    color: #F2B872;
+    text-decoration: none;
+    
+
+    display: block;
+    z-index: 1001;
+    /* Z-index para asegurar que los enlaces son clicables */
+}
+
+.containerCel a:hover {
+    background-color: #F2B872;
+    color: white;
+}
+
+.containerB{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.containerB a{
+
+    background-color: #f0f0f0;
+    padding:0.3rem 1rem;
+    margin: 0.2rem 0.15rem;
+    border-radius: 10rem;
+    font-weight: 600;
+    color: #9b2b34;
+
+}

@@ -1,9 +1,10 @@
 
 .header{
-    @apply p-2  border-b-2 shadow-sm shadow-orange-400;
+    @apply p-2  border-b-2 shadow-sm shadow-orange-400 ;
     background-color: #F2F2F2;
     border-color: #9b2b34;
-
+    
+   
 }
 .container{
     @apply flex justify-between;
@@ -65,7 +66,9 @@
 .imglogo{
     @apply w-10 h-10;
 }
-
+.iconperfil{
+    @apply w-10 h-10;
+}
 .celcontainer{
     @apply hidden max-lg:flex;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState,useRef, cloneElement } from 'react';
 import classes from './navegador.module.css';
 import { Link } from 'react-router-dom';
 import { useCart } from '../../Hooks/useCart';
@@ -23,7 +23,7 @@ export default function Navegador() {
     <header className={classes.header}>
         <div className={classes.container}>
             <div className={classes.logo}>
-                <img src='bread.png' alt='pan' className={classes.imglogo}/>
+                <Link  to="/"><img src='/Bonitos.png' alt='pan' className={classes.imglogo}/></Link>
             </div>
             <div className={classes.navmenu_l}>
                 <ul>
@@ -42,7 +42,7 @@ export default function Navegador() {
                             <button onClick={toggleMenu}>{user.name}</button>
                             <div ref={menuRef} className={menuVisible ? `${classes.menuCel}` : classes.menuCelOf}>
                             <Link  onClick={toggleMenu} to="/">Inicio</Link>
-                            <Link  onClick={toggleMenu} to="/profile">Perfil</Link>
+                          
                             <Link onClick={toggleMenu}  to="/productos">Productos</Link>
                             <Link onClick={toggleMenu}  to="/cart">Carrito</Link>
                             <Link  onClick={toggleMenu} to="/orders">Pedidos</Link>
@@ -52,7 +52,7 @@ export default function Navegador() {
                     <li className={classes.menuUsuario}>
                         <Link to ="/">{user.name}</Link>
                         <div className={classes.menu}>
-                        <Link to="/profile">Perfil</Link>
+                        
                         <Link to="/orders">Pedidos</Link>
                         <Link  onClick={cerrar_session} to="/login">Cerrar Sesión</Link>
                         </div>
@@ -61,7 +61,7 @@ export default function Navegador() {
                 ) : (
                     <>
                     <div className={classes.celcontainer}>
-                    <button onClick={toggleMenu}>(Icono)</button>
+                    <button onClick={toggleMenu}><img className={classes.iconperfil} src='https://img.icons8.com/?size=100&id=teAmm8wzAnK7&format=png&color=000000' alt='perfil'/></button>
                     <div className={menuVisible ? `${classes.menuCel}` : classes.menuCelOf}>
                      <Link onClick={toggleMenu} to="/">Inicio</Link>
                       <Link onClick={toggleMenu} to="/productos">Productos</Link>

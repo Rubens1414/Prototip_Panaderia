@@ -22,7 +22,7 @@
 
 }
 .container .text{
-    @apply mt-4;
+    @apply mt-4 px-3;
 }
 
 
@@ -36,3 +36,5 @@
 .total{
     @apply text-center w-28  m-auto py-2 rounded-lg shadow-lg bg-green-500;
 }
+
+
